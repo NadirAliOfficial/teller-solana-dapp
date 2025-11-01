@@ -72,4 +72,4 @@ npm run build
 ---
 
 Maintained by Nadir Ali Khan and @theteamnak.com
-<!-- updated: 2025-10-27-r01 -->
+<!-- updated: 2025-11-01 -->
