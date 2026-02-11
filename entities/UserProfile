@@ -1,0 +1,56 @@
+{
+  "name": "UserProfile",
+  "type": "object",
+  "properties": {
+    "connected_wallet": {
+      "type": "string",
+      "description": "Connected Seeker wallet address"
+    },
+    "wallet_label": {
+      "type": "string",
+      "description": "Label from MWA wallet account"
+    },
+    "is_premium": {
+      "type": "boolean",
+      "default": false,
+      "description": "Has premium NFT access"
+    },
+    "premium_nft_mint": {
+      "type": "string",
+      "description": "Mint address of owned premium NFT"
+    },
+    "premium_verified_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When premium status was last verified"
+    },
+    "auth_provider": {
+      "type": "string",
+      "enum": [
+        "wallet",
+        "google",
+        "twitter",
+        "discord"
+      ],
+      "description": "How user authenticated"
+    },
+    "display_currency": {
+      "type": "string",
+      "enum": [
+        "usdc",
+        "sol"
+      ],
+      "default": "usdc",
+      "description": "Preferred volume display currency"
+    },
+    "network": {
+      "type": "string",
+      "enum": [
+        "mainnet",
+        "devnet"
+      ],
+      "default": "mainnet"
+    }
+  },
+  "required": []
+}
