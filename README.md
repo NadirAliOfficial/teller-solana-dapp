@@ -1,39 +1,74 @@
-**Welcome to your Base44 project** 
 
-**About**
+# Teller Solana dApp
 
-View and Edit  your app on [Base44.com](http://Base44.com) 
+Teller is a Solana wallet analytics and chain statistics application.  
+This repository contains the cleaned and structured codebase prepared for Solana dApp Store and Solana Mobile compliance (Phase 2).
 
-This project contains everything you need to run your app locally.
+## Purpose
+- Track and analyze Solana wallet activity
+- Display wallet metrics and insights in a user-friendly dashboard
+- Provide analytics only (no custody, no trading, no signing transactions)
 
-**Edit the code in your local development environment**
+## Current Status
+- Phase 2 setup completed
+- Codebase cleaned and structured for Solana dApp development
+- Solana wallet integration and compliance work in progress
 
-Any change pushed to the repo will also be reflected in the Base44 Builder.
+## Tech Stack
+- Vite
+- React
+- Tailwind CSS
+- Solana Wallet Adapter
 
-**Prerequisites:** 
+## Setup (Local Development)
 
-1. Clone the repository using the project's Git URL 
-2. Navigate to the project directory
-3. Install dependencies: `npm install`
-4. Create an `.env.local` file and set the right environment variables
+### Prerequisites
+- Node.js 18+
+- npm or pnpm
 
+### Installation
+```bash
+npm install
+````
+
+### Environment Variables
+
+Create a `.env.local` file in the root directory if required for API access or external services.
+
+```env
+VITE_APP_ENV=development
 ```
-VITE_BASE44_APP_ID=your_app_id
-VITE_BASE44_APP_BASE_URL=your_backend_url
 
-e.g.
-VITE_BASE44_APP_ID=cbef744a8545c389ef439ea6
-VITE_BASE44_APP_BASE_URL=https://my-to-do-list-81bfaad7.base44.app
+### Run the App
+
+```bash
+npm run dev
 ```
 
-Run the app: `npm run dev`
+### Build
 
-**Publish your changes**
+```bash
+npm run build
+```
 
-Open [Base44.com](http://Base44.com) and click on Publish.
+## Solana Wallet Support
 
-**Docs & Support**
+* Phantom
+* Solflare
+  (additional wallets may be enabled as needed)
 
-Documentation: [https://docs.base44.com/Integrations/Using-GitHub](https://docs.base44.com/Integrations/Using-GitHub)
+## Notes
 
-Support: [https://app.base44.com/support](https://app.base44.com/support)
+* This app is analytics-only and does not execute transactions
+* No private keys are stored
+* Wallet connections are read-only for data retrieval
+
+## Roadmap
+
+* Finalize Solana Mobile dApp Store compliance
+* Mobile UX validation
+* Submission-ready build packaging
+
+---
+
+Maintained by Nadir Ali Khan
