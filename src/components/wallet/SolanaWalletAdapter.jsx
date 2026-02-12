@@ -6,25 +6,33 @@ import {
   PhantomWalletAdapter,
   SolflareWalletAdapter,
 } from '@solana/wallet-adapter-wallets';
+
 import '@solana/wallet-adapter-react-ui/styles.css';
 
 const network = WalletAdapterNetwork.MainnetBeta;
-const RPC_ENDPOINT = 'https://api.mainnet-beta.solana.com';
+
+const RPC_ENDPOINT =
+  import.meta.env.VITE_SOLANA_RPC ||
+  'https://api.mainnet-beta.solana.com';
 
 export default function SolanaWalletAdapter({ children }) {
-  const wallets = useMemo(
-    () => [
-      new PhantomWalletAdapter(),
-      new SolflareWalletAdapter(),
-    ],
-    []
-  );
+  const wallets = useMemo(() => {
+    try {
+      return [
+        new PhantomWalletAdapter(),
+        new SolflareWalletAdapter(),
+      ];
+    } catch (error) {
+      console.error('Wallet adapter init failed', error);
+      return [];
+    }
+  }, []);
 
   return (
     <ConnectionProvider endpoint={RPC_ENDPOINT}>
-      <WalletProvider 
+      <WalletProvider
         wallets={wallets}
-        autoConnect={true}
+        autoConnect={false}
       >
         <WalletModalProvider>
           {children}
