@@ -76,13 +76,12 @@
 }
 
 
-
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-gray-700 outline-gray-500/50;
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-black text-white;
   }
 }
