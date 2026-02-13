@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 
+
 // Client-side validation using @solana/web3.js
 function isValidSolanaAddress(address) {
   if (!address || typeof address !== 'string') return false;

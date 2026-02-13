@@ -27,6 +27,7 @@ export default function SolanaWalletAdapter({ children }) {
       return [];
     }
   }, []);
+  
 
   return (
     <ConnectionProvider endpoint={RPC_ENDPOINT}>

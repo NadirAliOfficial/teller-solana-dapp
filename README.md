@@ -71,4 +71,4 @@ npm run build
 
 ---
 
-Maintained by Nadir Ali Khan
+Maintained by Nadir Ali Khan and @theteamnak.com
