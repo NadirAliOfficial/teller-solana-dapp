@@ -1,0 +1,27 @@
+{
+  "name": "TrackedWallet",
+  "type": "object",
+  "properties": {
+    "address": {
+      "type": "string",
+      "description": "Solana wallet address (base58)"
+    },
+    "label": {
+      "type": "string",
+      "description": "User-defined label for this wallet"
+    },
+    "is_connected_wallet": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether this is the user's connected wallet"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether this wallet is included in metrics"
+    }
+  },
+  "required": [
+    "address"
+  ]
+}

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Settings as SettingsIcon, Moon, Sun, DollarSign, Coins, ChevronRight } from 'lucide-react';
-import { useWallet } from '@/components/wallet/WalletContext';
+import { useWallet } from '@/components/wallet/WalletContextLegacy';
 import { Button } from '@/components/ui/button';
 
 export default function SettingsPage() {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import SolanaWalletAdapter from '@/components/wallet/SolanaWalletAdapter';
-import { WalletProvider } from '@/components/wallet/WalletContext';
+import { WalletContextProvider } from '@/components/wallet/WalletContextLegacy';
 import BottomNav from '@/components/navigation/BottomNav';
 
 const pageVariants = {
@@ -35,7 +35,7 @@ export default function Layout({ children, currentPageName }) {
 
   return (
     <SolanaWalletAdapter>
-      <WalletProvider>
+      <WalletContextProvider>
         <div className="min-h-screen bg-[#1A1B2E]">
           {/* Safe area padding for notch / dynamic island */}
           <div className="pt-safe">
@@ -95,7 +95,7 @@ export default function Layout({ children, currentPageName }) {
             -moz-osx-font-smoothing: grayscale;
           }
         `}</style>
-      </WalletProvider>
+      </WalletContextProvider>
     </SolanaWalletAdapter>
   );
 }
