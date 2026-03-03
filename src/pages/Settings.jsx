@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Settings as SettingsIcon, Moon, Sun, DollarSign, Coins, ChevronRight } from 'lucide-react';
 import { useWallet } from '@/components/wallet/WalletContextLegacy';
 import { Button } from '@/components/ui/button';
+import DonateButton from '@/components/ui/DonateButton';
 
 export default function SettingsPage() {
   const { userProfile, updateProfile } = useWallet();
@@ -123,6 +124,9 @@ export default function SettingsPage() {
             <ChevronRight className="w-5 h-5 text-slate-500" />
           </div>
         </motion.div>
+
+        {/* Support / Donate */}
+        <DonateButton />
       </div>
     </div>
   );

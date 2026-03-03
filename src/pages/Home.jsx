@@ -4,6 +4,7 @@ import { Activity, RefreshCw, Wallet } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import GoblinMascot from '@/components/ui/GoblinMascot';
 import TimeRangeSelector from '@/components/ui/TimeRangeSelector';
+import DonateButton from '@/components/ui/DonateButton';
 import { useWallet } from '@/components/wallet/WalletContextLegacy';
 import { createPageUrl } from '@/utils';
 import { Link } from 'react-router-dom';
@@ -252,7 +253,7 @@ export default function HomePage() {
       </div>
 
       {/* Quick actions */}
-      <div className="mt-4 flex justify-center">
+      <div className="mt-4 flex flex-col items-center gap-4">
         <Link to={createPageUrl('Insights')} className="w-3/4 max-w-sm">
           <Button 
             className="w-full border-2 border-[#5EEAD4] bg-slate-800/50 text-white hover:bg-[#5EEAD4]/20 rounded-2xl h-14 font-bold text-base shadow-[0_0_20px_rgba(94,234,212,0.3)] hover:shadow-[0_0_30px_rgba(94,234,212,0.5)] transition-all"
@@ -261,6 +262,7 @@ export default function HomePage() {
             View Insights
           </Button>
         </Link>
+        <DonateButton compact />
       </div>
     </div>
   );

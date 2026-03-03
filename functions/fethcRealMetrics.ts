@@ -1,6 +1,6 @@
 import { createClientFromRequest } from 'npm:@base44/sdk@0.8.6';
 
-const SOLANA_RPC = 'https://api.mainnet-beta.solana.com';
+const SOLANA_RPC = 'https://mainnet.helius-rpc.com/?api-key=9abceca9-8da1-4d53-ba5a-33e33925f197';
 const USDC_MINT = 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v';
 
 Deno.serve(async (req) => {

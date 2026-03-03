@@ -13,7 +13,7 @@ const network = WalletAdapterNetwork.MainnetBeta;
 
 const RPC_ENDPOINT =
   import.meta.env.VITE_SOLANA_RPC ||
-  'https://api.mainnet-beta.solana.com';
+  'https://mainnet.helius-rpc.com/?api-key=9abceca9-8da1-4d53-ba5a-xcvwdsgfrsgf';
 
 export default function SolanaWalletAdapter({ children }) {
   const wallets = useMemo(() => {
